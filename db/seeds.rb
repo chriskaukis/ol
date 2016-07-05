@@ -1,13 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 require 'csv'
 
+# NOTE: This is slow. A better way to handle this to leverage bulk insert if
+# the database supports it. Be careful though and make sure to escape all
+# necessary data and handle date formatting which ActiveRecord handles for us.
 CSV.foreach(File.join(File.expand_path(File.dirname(__FILE__)), 'seeds.csv'), headers: true) do |row|
   Business.find_or_create_by!(uuid: row['uuid']) do |business|
     business.name = row['name']
