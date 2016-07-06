@@ -9,11 +9,18 @@ class BusinessesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should return link headers' do
-    skip 'We either need more test data or a way to override per page or another means where the Link header will get set.'
+    get businesses_url
+    assert response.headers.has_key?('Link')
+  end
+
+  test 'should contain pagination links metadata' do
+    get businesses_url
+    json = JSON.parse(response.body)
+    assert json.has_key?('links')
   end
 
   test 'should return a business' do
-    business = businesses(:one)
+    business = businesses(:business_1)
     get business_url(business), as: :json
     json = JSON.parse(response.body)
     # We could also test each attribute.

@@ -1,27 +1,15 @@
-one:
-  uuid: d083169c-4340-4a07-b390-07d297823efd
-  name: Botsford Ltd
-  address: 74883 Hane Prairie
-  address2:
-  city: Margrettburgh
-  state: KS
-  zip: 99840
+<% 1000.times do |i| %>
+business_<%= i %>:
+  uuid: <%= SecureRandom.uuid %>
+  name: Business <%= i %>
+  address: <%= i %> 123 Main St.
+  address2: Suite <%= i %>
+  city: City <%= i %>
+  state: TX
+  zip: 78704
   country: US
-  phone: 2462288476
-  website: http://bergstrom.org/
-  created_at: 2013-11-19 23:26:13
-  updated_at: 2013-11-19 23:26:13
-
-two:
-  uuid: 744f1e2c-7e92-41cd-8549-5eebd80393ac
-  name: Turner, Kris and Conroy
-  address: 194 Reino Ways
-  address2: Apt. 735
-  city: East Harlon
-  state: NH,
-  zip: 15676
-  country: US
-  phone: 1788019885
-  website: http://schmitt.net/
-  created_at: 2014-03-27 07:56:45
-  updated_at: 2014-03-27 07:56:45
+  phone: 1788019<%= i %>85
+  website: http://business<%= i %>.com/
+  created_at: <%= Time.zone.now - (i.days) %>
+  updated_at: <%= Time.zone.now %>
+<% end %>
