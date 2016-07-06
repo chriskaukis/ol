@@ -36,9 +36,9 @@ This application was created using Ruby version 2.3.0 and Rails 5.0.0 using RVM 
 
   For example:
 
-  `git clone https://github.com/ol/project.git ~/ol_project`
+  `git clone https://github.com/chriskaukis/ol.git`
 
-  `cd ~/ol_project`
+  `cd ~/ol`
 
   `bundle install`
 
@@ -46,7 +46,7 @@ This application was created using Ruby version 2.3.0 and Rails 5.0.0 using RVM 
 
 4. Seed the database:
 
-  This will load the data file in `db/seeds.csv` (the original data file provided for the project) into the database.
+  This will load the data file in `db/seeds.csv` (the original data file provided for the project) into the database. Go get coffee or mingle or a nap and rest your brain for a few minutes while this runs.
 
   `rails db:seed`
 

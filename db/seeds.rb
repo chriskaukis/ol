@@ -4,6 +4,8 @@ require 'csv'
 # the database supports it. Be careful though and make sure to escape all
 # necessary data and handle date formatting which ActiveRecord handles for us.
 CSV.foreach(File.join(File.expand_path(File.dirname(__FILE__)), 'seeds.csv'), headers: true) do |row|
+  # find_or_create_by will slow down the seed greatly, but if ever accidently run again
+  # will prevent from having any duplicate data.
   Business.find_or_create_by!(uuid: row['uuid']) do |business|
     business.name = row['name']
     business.address = row['address']
