@@ -2,7 +2,7 @@
 
 ## Installation
 
-This application was created using Ruby version 2.3.1 and Rails 5.0.0 using RVM to manage the Ruby and Gems needed to generate a Rails application.
+This application was created using Ruby version 2.3.0 and Rails 5.0.0 using RVM to manage the Ruby and Gems needed to generate a Rails application.
 
 1. Install RVM if you don't already have it installed.
 
@@ -12,21 +12,21 @@ This application was created using Ruby version 2.3.1 and Rails 5.0.0 using RVM 
 
   `curl -sSL https://get.rvm.io | bash -s stable`
 
-2. Install Ruby 2.3.1
+2. Install Ruby 2.3.0
 
-  `rvm install ruby-2.3.1`
+  `rvm install ruby-2.3.0`
 
   Make sure you are switched to using this version of Ruby also:
 
-  `ruby -v` should output something like this: `ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin15]`
+  `ruby -v` should output something like this: `ruby 2.3.0p112 (2016-04-26 revision 54768) [x86_64-darwin15]`
 
   If you are not using the correct version of Ruby just insalled:
 
-  `rvm use ruby-2.3.1`
+  `rvm use ruby-2.3.0`
 
   or optionally, create a new gemset:
 
-  `rvm use ruby-2.3.1@rails-5.0.0 --create`
+  `rvm use ruby-2.3.0@rails-5.0.0 --create`
 
   Make sure bundler is installed:
 
@@ -56,7 +56,7 @@ This application was created using Ruby version 2.3.1 and Rails 5.0.0 using RVM 
 
 ## Ruby version
 
-`2.3.1`
+`2.3.0`
 
 ## System dependencies
 
